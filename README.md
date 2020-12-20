@@ -1,27 +1,44 @@
-# An Analysis of Kickstarter Campaigns
-An analysis of Kickstarter campaigns based on category, with a focus on successful and failed theater/play-related campaigns in the US and a brief look at musical campaigns in Great Britain.
+# Kickstarting with Excel
 
-## General Findings
-The month of May showed itself to have the most successful number of Kickstarter campaign launches over all categories. Failed campaign launches showed less of a trend as far as their month of origin.
+## Overview of Project
 
-![Outcomes Based on Launch Date](/Outcomes%20Based%20on%20Launch%20Date.png)
+### Purpose
 
-Kickstarter campaigns were heavily focused on theater, of which also proved to be the most successful campaign type.
+The purpose of this analysis is to determine and visualize how different theater campaigns fared in relation to their launch dates and funding goals. Prior to this analysis, we discovered that theater campaigns account for the majority of Kickstarter campaigns, and appear to also be the most successful.
 
-![Parent Category Outcomes](/Parent%20Category%20Outcomes.png)
+## Analysis and Challenges
 
-## Theater-related Campaigns
-As mentioned above, theater-related projects were the vast majority of our Kickstarter campaign data.
+### Analysis of Outcomes Based on Launch Date
 
-### Outcomes Based on Launch Date
-The month of May contained the most successful launches of theater-related Kickstarters, with March and September tying for the number of least successful launches.
+![Theater Outcomes Based on Launch Date](/resources/Theater_Outcomes_vs_Launch.png)
 
-### Theater-related Campaigns in the US
-The mean goal of successful US theater campaigns was $5,049, with a mean pledged amount of $5,602. Successful US theater campaigns had a median goal of $3,000, with a median pledged amount of $3,168.
-The mean goal of failed US theater campaigns was $10,554, with a mean pledged amount of $559. Failed US theater campaigns had a median goal of $5,000, with a median pledged amount of $103. This data tells us that there are reasons other than financial that led to the failure of some Kickstarter campaigns.
+Here we filtered our data to help us visualize which month showed the greatest success in theater campaign launches. We then calculated the number of successful, failed, and canceled campaigns for each month.
 
-## Musical Campaigns in Great Britain
-For musical campaigns in Great Britain, the mean goal was £4,000, with a mean pledged amount of about £1,000.
+### Analysis of Outcomes Based on Goals
 
-## Recommendations
-Theater-related Kickstarters have proved to show the most success as far as category is concerned, and in the US, sticking to a goal near the mean of $5,049 could yield success. Launching the Kickstarter in May could lead to greater success as well. If considering launching a musical campaign in Great Britain, you might want to focus your goal somewhere near the mean pledged amount of £1,000.
+![Theater Outcomes Based on Goals](/resources/Outcomes_vs_Goals.png)
+
+We wanted to discover where an ideal funding goal should be set in order to obtain success in a theater campaign launch. We calculated the number of successful, failed, and canceled campaigns within a set goal range. Our graph shows the success rate percentage of each goal range.
+
+### Challenges and Difficulties Encountered
+
+I personally ran into a difficulties analyzing the "goals" data - namely, with the COUNTIFS function. Incorrectly set criteria were causing the number of successful and failed outcomes to appear strangely high. Once I corrected the criteria, the visualization 
+took shape to reflect accurate results.
+
+## Results
+
+- What are two conclusions you can draw about the Outcomes based on Launch Date?
+
+The most successful month to launch a theater campaign is May, with June a close second. The least successful months to launch a theater campaign are May and October. We can also see that there are almost twice as many successful theater campaigns than failures.
+
+- What can you conclude about the Outcomes based on Goals?
+
+The majority of projects set a funding goal of $1000-$4999, and the vast majority of these projects were successful (86%). Projects with a funding goal of less than $1000 also showed great success at 76%. 
+
+- What are some limitations of this dataset?
+
+We cannot determine other factors that influenced the failure of theater campaigns. Funding goal and launch date are clearly two pieces of a bigger picture that we can't fully see. Also, the dataset has outliers - there are very few theater campaigns with goals ranging from $25,000 to greater than $50,000.
+
+- What are some other possible tables and/or graphs that we could create?
+
+Looking at the Kickstarter dataset as a whole, we could compare success/failure rates across campaigns between different musical genres, for example, the success rate of jazz campaigns versus metal campaigns. Or, we could look at the outcome based on funding goals for documentary film campaigns versus animation film campaigns.
